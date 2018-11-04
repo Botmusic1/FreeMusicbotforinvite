@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "c!";
+const prefix = "C!";
 /////////////////////////
 ////////////////////////
 
@@ -75,7 +75,7 @@ client.on('message', async msg =>{
 });
 /////////////////////////
 client.on('ready', () => {
-       client.user.setActivity("c!help c!play ",{type: 'WATCHING'});
+       client.user.setActivity(" C!help C!play ",{type: 'WATCHING'});
   });
 ////////////////////////
 //////////////////////
@@ -321,7 +321,7 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === 'c!help') {
+    if (message.content === 'C!help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
         .setDescription('**برفكس البوت c!**')
@@ -345,13 +345,13 @@ client.on('message', message => {
         .addField('avatar', "افاتار الشخص المطلوب")
         .addField('gif', 'البحث عن جيف انت تطلبه')
         .addField('ping', 'معرفة ping البوت')
-        .setFooter('المزيد قريبا ان شاء الله!')
+        .setFooter('»Top')
       message.channel.send(helpEmbed);
     }
 });
 
 client.on('message', message => {
-    var prefix = "c!"
+    var prefix = "C!"
 if (message.content.startsWith(prefix + "uptime")) {
    let uptime = client.uptime;
 
@@ -395,7 +395,7 @@ if (message.content.startsWith(prefix + "uptime")) {
 });
 
 client.on('ready', () => {
-  client.user.setGame(` c!help  c!play .`,'');
+  client.user.setGame(` C!help  C!play .`,'');
   console.log('---------------');
   console.log('Desert Bot Is Online')
   console.log('---------------')
