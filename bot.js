@@ -74,6 +74,9 @@ client.on('message', async msg =>{
     };
 });
 /////////////////////////
+client.on('ready', () => {
+       client.user.setActivity("c!help c!play ",{type: 'WATCHING'});
+  });
 ////////////////////////
 //////////////////////
 /////////////////////////
